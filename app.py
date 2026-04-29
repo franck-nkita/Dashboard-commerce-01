@@ -35,7 +35,7 @@ GROUP BY date
 ORDER BY date
 """, conn)
 
-st.subheader("📈 Commandes par jour")
+st.subheader(" Commandes par jour")
 st.line_chart(cmd_jour.set_index("date"))
 
 # Top produits
@@ -49,5 +49,5 @@ ORDER BY total DESC
 LIMIT 10
 """, conn)
 
-st.subheader("🔥 Top produits")
+st.subheader(" Top produits")
 st.bar_chart(top.set_index("nom"))
